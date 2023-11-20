@@ -1,10 +1,6 @@
 <?php
 
-/**
- * Class Song
- *
- * Represents a song with basic properties.
- */
+namespace practicals;
 class Song
 {
     /** @var string The title of the song. */
@@ -32,7 +28,7 @@ class Song
         $this->title = $title;
         $this->artist = $artist;
         $this->genre = $genre;
-        $this->tempo = $tempo;
+        $this->setTempo($tempo);
     }
 
     /**
@@ -108,13 +104,19 @@ class Song
     /**
      * Set the tempo of the song.
      *
-     * @param int $tempo The tempo of the song.
+     * @param mixed $tempo The tempo of the song.
      */
+    
     public function setTempo($tempo)
     {
-        $this->tempo = $tempo;
+        if (!is_numeric($tempo) || is_float($tempo)) {
+            throw new \InvalidArgumentException("Tempo must be a numeric, non-float value.");
+        }
+    
+        $this->tempo = (int)$tempo;
     }
+    
+
 }
 
-?>
 
