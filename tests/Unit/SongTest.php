@@ -11,14 +11,14 @@ class SongTest extends TestCase
 {
     public function testSetTempo()
     {
-        $song = new Song("Title", "Artist", "Genre", 120);
-        $this->assertEquals(120, $song->getTempo());
+        $song = new Song("Title", "Artist", "Genre", 60);
+        $this->assertEquals(60, $song->getTempo());
     }
 
     public function testSetTempoAcceptsIntegerString()
     {
-        $song = new Song("Title", "Artist", "Genre", "120");
-        $this->assertEquals(120, $song->getTempo());
+        $song = new Song("Title", "Artist", "Genre", "60");
+        $this->assertEquals(60, $song->getTempo());
     }
 
     public function testSetTempoRejectsAlphabetString()
