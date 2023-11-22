@@ -1,6 +1,6 @@
 <?php
 
-namespace Practicals;
+namespace practicals;
 class Song
 {
     /** @var string The title of the song. */

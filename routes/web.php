@@ -2,7 +2,8 @@
 
 // routes/web.php
 
-use Illuminate\Support\Facades\Route;
+// use Illuminate\Support\Facades\Route;
+// use practicals\Song;
 
 // Route for /veggies/baigan
 Route::get('/veggies/baigan', function () {
@@ -29,4 +30,29 @@ Route::get('/veggies', function () {
     $veggies = ['Baigan', 'Bhindi', 'Aaloo', 'Gobhi'];
     return view('veggies', ['veggies' => $veggies]);
 });
+Route::get('/songs', function () {
+    return "Songs";
+});
+
+Route::get('/songs', function () {
+    return view('songs');
+});
+
+// routes/web.php
+
+use Illuminate\Support\Facades\Route;
+use practicals\Song;
+
+// ... other routes ...
+
+Route::get('/songs', function () {
+    $song1 = new Song("Stan", "Eminem", "Rap", 120);
+  
+    $song2 = new Song("Nothing Else Matters", "Metallica", "Rock", 80);
+  
+    $song3 = new Song("With You", "A P Dhillon", "Punjabi", 100);
+  
+    return view('songs', [ 'songs' => [ $song1, $song2, $song3 ] ]); 
+});
+
 
