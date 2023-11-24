@@ -41,11 +41,10 @@ Route::get('/songs', function () {
 // routes/web.php
 
 use Illuminate\Support\Facades\Route;
-use practicals\Song;
-
+use App\Models\Song;
 // ... other routes ...
 
-Route::get('/songs', function () {
+Route::get('/songs_static', function () {
     $song1 = new Song("Stan", "Eminem", "Rap", 120);
   
     $song2 = new Song("Nothing Else Matters", "Metallica", "Rock", 80);
@@ -53,6 +52,9 @@ Route::get('/songs', function () {
     $song3 = new Song("With You", "A P Dhillon", "Punjabi", 100);
   
     return view('songs', [ 'songs' => [ $song1, $song2, $song3 ] ]); 
+});
+Route::get('/songs', function () {
+    return view('songs', [ 'songs' => Song::all() ] );
 });
 
 
