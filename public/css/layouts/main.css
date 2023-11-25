@@ -1,60 +1,61 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            display: grid;
-            grid-template-columns: 200px 1fr;
-            grid-template-rows: auto 1fr auto;
-            grid-template-areas:
-                "header header"
-                "sidebar main"
-                "footer footer";
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    
+}
 
-        header {
-            grid-area: header;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+main {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 20px;
+    padding: 20px;
+}
 
-        sidebar {
-            grid-area: sidebar;
-            padding: 20px;
-            background-color: #eee;
-        }
+aside {
+    background-color: #f4f4f4;
+    padding: 10px;
+}
 
-        main {
-            grid-area: main;
-            padding: 20px;
-        }
+section {
+    width: 100%;
+}
 
-        footer {
-            grid-area: footer;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
+section div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
+section div:nth-child(odd) {
+    background-color: #f2f2f2;
+}
 
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #333;
-            color: white;
-        }
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.b1,.b2{
+    padding: 10px;
+    background-color: aqua;
+    border: solid aqua;
+    border-radius: 20px;
+    margin: 5px;
+}   
+        
     
