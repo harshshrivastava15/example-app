@@ -33,6 +33,18 @@ class SongSeeder extends Seeder
             'album' => 'worst album',
             'duration' => '3:34'
         ]);
+        Song::create([
+            'artist' => 'Honey Singh',
+            'title' => 'Love Dose',
+            'album' => 'Desi Kalakar',
+            'duration' => '3:50'
+        ]);
+        Song::create([
+            'artist' => 'Arijit Singh',
+            'title' => 'Chaleya',
+            'album' => 'Jawan',
+            'duration' => '3:40'
+        ]);
 
     }
 }
