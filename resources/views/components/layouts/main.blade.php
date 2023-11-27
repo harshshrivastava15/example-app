@@ -18,6 +18,7 @@
         <h1>Playlist Name</h1>
         <!-- <p>Playlist Description or Information</p> -->
         <div class="playlist">
+           <h1 class="playlistName">Playlist-1</h1>
            <button class="b1">Edit Playlist</button>
            <button class="b2">New Playlist</button>
         </div>
