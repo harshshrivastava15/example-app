@@ -12,8 +12,8 @@
                     <div>{{$index + 1}}</div>
                     <div>{{$song->title}}</div>
                     <div>{{$song->artist}}</div>
-                    <div>album</div>
-                    <div>duration</div>
+                    <div>{{$song->album}}</div>
+                    <div>{{$song->duration}}</div>
                     
                 
                 </div>

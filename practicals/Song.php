@@ -23,12 +23,12 @@ class Song
      * @param string $genre       The genre of the song.
      * @param int    $tempo       The tempo of the song.
      */
-    public function __construct($title, $artist, $genre, $tempo)
+    public function __construct($title, $artist, $album, $duration)
     {
         $this->title = $title;
         $this->artist = $artist;
-        $this->genre = $genre;
-        $this->setTempo($tempo);
+        $this->album = $album;
+        $this->duration=($duration);
     }
 
     /**
@@ -76,9 +76,9 @@ class Song
      *
      * @return string The genre of the song.
      */
-    public function getGenre()
+    public function getAlbum()
     {
-        return $this->genre;
+        return $this->album;
     }
 
     /**
@@ -86,9 +86,9 @@ class Song
      *
      * @param string $genre The genre of the song.
      */
-    public function setGenre($genre)
+    public function setAlbum($album)
     {
-        $this->genre = $genre;
+        $this->album = $album;
     }
 
     /**
@@ -96,9 +96,9 @@ class Song
      *
      * @return int The tempo of the song.
      */
-    public function getTempo()
+    public function getDuration()
     {
-        return $this->tempo;
+        return $this->duration;
     }
 
     /**
@@ -107,14 +107,10 @@ class Song
      * @param mixed $tempo The tempo of the song.
      */
     
-    public function setTempo($tempo)
-    {
-        if (!is_numeric($tempo) || is_float($tempo)) {
-            throw new \InvalidArgumentException("Tempo must be a numeric, non-float value.");
-        }
-    
-        $this->tempo = (int)$tempo;
-    }
+     public function setDuration($album)
+     {
+         $this->duration = $duration;
+     }
     
 
 }
